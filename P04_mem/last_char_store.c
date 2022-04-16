@@ -70,7 +70,6 @@ static int __init lcs_init(void)
 	}
 
 	cdev_init(&c_dev, &driver_fops);
-
 	if ((ret = cdev_add(&c_dev, dev, MINOR_CNT)) < 0)
 	{
 		return ret;

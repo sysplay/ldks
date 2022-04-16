@@ -63,7 +63,6 @@ static int __init adf_init(void)
 	}
 
 	cdev_init(&c_dev, &driver_fops);
-
 	if ((ret = cdev_add(&c_dev, dev, MINOR_CNT)) < 0)
 	{
 		unregister_chrdev_region(dev, MINOR_CNT);
